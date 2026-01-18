@@ -1,1 +1,56 @@
-.navbar {float: right;}
+body{display: contents;}
+
+.navbar {float: right;
+margin: 20px;
+border: 1px solid red;}
+
+.nav-item {text-decoration: none;
+color: black;
+ margin-right: 15px;}
+
+ .nav-item:hover {text-decoration: underline;}
+
+
+ .main {margin-top: 300px;
+text-align: center;}
+
+.input-area{margin-top: 20px;}
+
+.input-box{
+    width: 584px;
+    height: 46px;
+    border-radius: 26px;
+    border: 1px solid #dadce0;
+    padding-left: 40px;
+    padding-right: 40px;}
+   
+.search-icon{
+    position: relative;
+    left: 40px;
+    color: #9aa0a6;
+}
+
+.mic-icon{
+    position: relative;
+    right: 40px;
+    color: #9aa0a6;
+}
+
+.button-area{
+    padding-top: 18px;
+}
+
+.button-style{
+    background-color: rgb(248, 249, 250);
+    color: rgb(60, 64, 67);
+    font-size: 14px;
+    height: 36px;
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(248, 249, 250);
+    border-image: initial;
+    margin: 11px 4px;
+    padding: 0px 16px;
+    border-radius: 4px;
+}
