@@ -1,8 +1,52 @@
-<div class="challenge2"> 
-  <h1>HTML Tutorial</h1> 
-  <p class="sub-header">HTML is the standard markup language for Web pages. With HTML you can create your own Website. HTML is easy to learn - You will enjoy it! </p> 
-  <p>The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript. ... HTML elements are the building blocks of HTML pages.  </p> 
-  <h1>CSS Tutorial</h1> 
-  <p class="sub-header">CSS is the language we use to style an HTML document.CSS describes how HTML elements should be displayed.This tutorial will teach you CSS from basic to advanced.</p> 
-  <p>Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.  </p> 
+<div class="challenge2">
+  <h1>HTML Tutorial</h1>
+  <p class="sub-header">HTML is the standard markup language for Web pages. With HTML you can create your own Website. HTML is easy to learn - You will enjoy it!</p>
+  <p>
+   The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript. ... HTML elements are the building blocks of HTML pages.
+  </p>
+  <h1>CSS Tutorial</h1>
+  <p class="sub-header">CSS is the language we use to style an HTML document.CSS describes how HTML elements should be displayed.This tutorial will teach you CSS from basic to advanced.</p>
+  <p>
+   Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
+  </p>
 </div>
+
+
+
+.challenge2 {
+  background-color: #fff;
+  /* 세로선 위치와 가로줄 간격을 조절했습니다 */
+  background-image: 
+    linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+    linear-gradient(#eee .1em, transparent .1em);
+  background-size: 100% 1.5em; /* 줄 간격을 살짝 넓힘 */
+  padding-left: 100px; /* 세로선(80px)보다 조금 더 안쪽으로 들여쓰기 */
+  padding-right: 10%;
+  line-height: 1.5em; /* 글자 높이를 배경 줄 높이와 맞춤 */
+}
+
+/* 나머지 코드는 아주 좋습니다! */
+p {
+  font-style: italic;
+  font-size: 16px;
+  font-family: Verdana, sans-serif; /* 폰트가 없을 경우를 대비한 백업 추가 */
+}
+
+p::first-letter {
+  font-size: 200%;
+  color: #2980b9;
+  font-weight: bold; /* 첫 글자를 더 강조하고 싶다면 추가 */
+}
+
+h1 {
+  color: #9b59b6;
+}
+
+h1::before {
+  content: "Topic: ";
+}
+
+h1:first-child {
+  text-align: center;
+  padding-right: 100px; /* 가운데 정렬 시 왼쪽 패딩만큼 오른쪽도 비워줘야 정확히 중앙에 옵니다 */
+}
