@@ -1,9 +1,26 @@
-body {}
+body {margin: 0px;
+    font-family: spotify-circular, Helvetica, Arial, sans-serif;
+
+    color: wheat;}
 
 a {color: white;
     text-decoration: none;}
+
+
 nav{background-color: black;
 height: ;
 display: flex;
 justify-content: space-around;
 align-items: center;}
+
+main{height: 969px;
+    background-color: blue;}
+
+.nav-item{
+    padding: 28px 17px;
+    font-weight: 700;
+}
+
+a:hover {
+    color: rgb(30, 215, 96);
+}
