@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHEF ROAD - 마포구 가이드</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">흑백요리사2 SEOUL LOAD</div>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav class="nav-menu">
+            <a href="#mapo-section" class="nav-link">마포구</a>
+        </nav>
+    </header>
+
+    <header>
+        <h1>Chef Road</h1>
+        <p>THE MAP OF CULINARY WAR</p>
+    </header>
+
+    <div class="container">
+
+        <!-- 마포구 섹션 -->
+        <section id="mapo-section" class="region-section">
+            <div class="region-visual-header">
+                <svg class="region-silhouette" viewBox="0 0 100 100">
+                    <path d="M10,40 L30,20 L70,20 L90,40 L80,70 L50,90 L20,70 Z" />
+                    <circle cx="50" cy="50" r="1.5" fill="var(--gold)" />
+                </svg>
+                <h2 class="region-name-large">마포구</h2>
+            </div>
+
+            <div class="chef-grid">
+                <!-- 백수저: 샘킴 -->
+                <div class="card white-spoon">
+                    <div class="card-left">
+                        <span class="spoon-type">WHITE SPOON</span>
+                        <h3 class="chef-name">샘킴</h3>
+                        <p class="chef-intro">정통 이탈리안 퀴진의 정수.<br>자연주의 요리의 대가.</p>
+                        <div class="location-meta">
+                            <span class="res-name">오스테리아 샘킴</span>
+                            <span class="res-addr"><i class="fas fa-location-arrow"></i> 서울 마포구 양화로3길 55 에이동 2층</span>
+                        </div>
+                    </div>
+                    <div class="card-right">
+                        <span class="dish-label">Signature Dish</span>
+                        <h4 class="dish-name">양식 (Western)</h4>
+                        <p class="chef-intro">신선한 재료 본연의 맛을 살린<br>샘킴 셰프만의 이탈리안 요리.</p>
+                    </div>
+                </div>
+
+                <!-- 백수저: 정호영 -->
+                <div class="card white-spoon">
+                    <div class="card-left">
+                        <span class="spoon-type">WHITE SPOON</span>
+                        <h3 class="chef-name">정호영</h3>
+                        <p class="chef-intro">일본 정통 우동과 소바의 대가.<br>섬세한 손맛의 일식 장인.</p>
+                        <div class="location-meta">
+                            <span class="res-name">우동 카덴</span>
+                            <span class="res-addr"><i class="fas fa-location-arrow"></i> 서울 마포구 양화로7안길 2-1</span>
+                        </div>
+                    </div>
+                    <div class="card-right">
+                        <span class="dish-label">Signature Dish</span>
+                        <h4 class="dish-name">우동, 소바 (Udon & Soba)</h4>
+                        <p class="chef-intro">탱글한 면발과 깊은 육수가 일품인<br>정통 일본식 면 요리.</p>
+                    </div>
+                </div>
+
+                <!-- 흑수저: 무쇠팔 -->
+                <div class="card black-spoon">
+                    <div class="card-left">
+                        <span class="spoon-type">BLACK SPOON</span>
+                        <h3 class="chef-name">무쇠팔</h3>
+                        <p class="chef-intro">일식의 깊은 맛을 전하는 일식당.<br>강렬하고 직관적인 풍미.</p>
+                        <div class="location-meta">
+                            <span class="res-name">소바쥬</span>
+                            <span class="res-addr"><i class="fas fa-location-arrow"></i> 서울 마포구 큰우물로 75 상가 지하1층
+                                22호</span>
+                        </div>
+                    </div>
+                    <div class="card-right">
+                        <span class="dish-label">Signature Dish</span>
+                        <h4 class="dish-name">일식당 (Japanese)</h4>
+                        <p class="chef-intro">무쇠팔 셰프만의 철학이 담긴<br>독창적인 일식 퀴진.</p>
+                    </div>
+                </div>
+
+                <!-- 흑수저: 뉴욕에 간 돼지곰탕 -->
+                <div class="card black-spoon">
+                    <div class="card-left">
+                        <span class="spoon-type">BLACK SPOON</span>
+                        <h3 class="chef-name">뉴욕에 간 돼지곰탕</h3>
+                        <p class="chef-intro">뉴욕에서도 인정받은 돼지곰탕의 명가.<br>깔끔하고 깊은 국물의 미학.</p>
+                        <div class="location-meta">
+                            <span class="res-name">옥동식</span>
+                            <span class="res-addr"><i class="fas fa-location-arrow"></i> 서울 마포구 양화로7길 44-10</span>
+                        </div>
+                    </div>
+                    <div class="card-right">
+                        <span class="dish-label">Signature Dish</span>
+                        <h4 class="dish-name">국밥 (Gomtang)</h4>
+                        <p class="chef-intro">전통적인 방식을 현대적으로 재해석한<br>맑고 깊은 돼지곰탕.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#" class="footer-link">이용약관</a>
+            <a href="#" class="footer-link">고객센터</a>
+            <a href="#" class="footer-link">개인정보처리방침</a>
+            <a href="#" class="footer-link">위치정보이용약관</a>
+        </div>
+        <div class="footer-copyright">
+            <span class="copyright-line1">©흑백요리사2 SEOUL LOAD</span>
+            <span class="copyright-line2">All Rights Reserved.</span>
+        </div>
+    </footer>
+
+</body>
+
+</html>

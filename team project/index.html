@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHEF ROAD - 지역 실루엣 가이드</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --gold: #c5a059;
+            --dark: #080808;
+            --card-gray: #121212;
+            --font-main: 'Pretendard', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--dark); color: #fff; font-family: var(--font-main); overflow-x: hidden; }
+
+        header { 
+            padding: 100px 20px; 
+            text-align: center; 
+            background: radial-gradient(circle at center, #1a1a1a 0%, #080808 100%);
+        }
+        header h1 { font-size: 3.5rem; color: var(--gold); letter-spacing: 10px; font-weight: 900; text-transform: uppercase; }
+        header p { color: #555; margin-top: 15px; font-size: 1.1rem; letter-spacing: 2px; }
+
+        nav {
+            position: sticky; top: 0; background: rgba(8, 8, 8, 0.95);
+            padding: 20px 0; z-index: 100; display: flex; justify-content: center; gap: 40px;
+            backdrop-filter: blur(15px); border-bottom: 1px solid #1a1a1a;
+        }
+        nav a { color: #666; text-decoration: none; font-size: 0.9rem; font-weight: 700; transition: 0.3s; }
+        nav a:hover { color: var(--gold); }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
+
+        /* 지역별 실루엣 섹션 */
+        .region-section {
+            margin-bottom: 150px;
+            position: relative;
+        }
+
+        .region-visual-header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        /* 실제 행정구역 실루엣 SVG 스타일 */
+        .region-silhouette {
+            width: 280px;
+            height: 280px;
+            margin: 0 auto 20px;
+            fill: none;
+            stroke: rgba(197, 160, 89, 0.2);
+            stroke-width: 1.5;
+            filter: drop-shadow(0 0 15px rgba(197, 160, 89, 0.1));
+            display: block;
+        }
+
+        .region-name-large {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #fff;
+            margin-top: -50px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* 셰프 카드 그리드 */
+        .chef-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .card {
+            background: var(--card-gray);
+            border: 1px solid #1a1a1a;
+            padding: 40px;
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            min-height: 400px;
+        }
+
+        .card:hover { 
+            border-color: var(--gold); 
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+
+        .card.white-spoon {
+            background: #fff;
+            color: #000;
+        }
+
+        .spoon-type {
+            font-size: 0.75rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+            display: block;
+        }
+        .black-spoon .spoon-type { color: var(--gold); }
+        .white-spoon .spoon-type { color: #666; }
+
+        .chef-name { font-size: 2rem; font-weight: 900; margin-bottom: 15px; }
+        .chef-intro { font-size: 1rem; opacity: 0.7; margin-bottom: 40px; line-height: 1.8; }
+
+        .location-meta {
+            margin-top: auto;
+            border-top: 1px solid rgba(128,128,128,0.1);
+            padding-top: 25px;
+        }
+        .res-name { font-weight: 800; font-size: 1.2rem; color: var(--gold); margin-bottom: 8px; display: block; }
+        .white-spoon .res-name { color: #000; text-decoration: underline; }
+        .res-addr { font-size: 0.85rem; opacity: 0.5; display: flex; align-items: center; gap: 8px; }
+
+        footer { padding: 100px 20px; text-align: center; border-top: 1px solid #1a1a1a; color: #333; }
+
+        @media (max-width: 768px) {
+            .region-silhouette { width: 200px; height: 200px; }
+            .region-name-large { font-size: 1.8rem; margin-top: -30px; }
+            .chef-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Chef Road</h1>
+        <p>THE MAP OF CULINARY WAR</p>
+    </header>
+
+    <nav>
+        <a href="#gn-section">GANGNAM-GU</a>
+        <a href="#ys-section">YONGSAN-GU</a>
+        <a href="#global-section">WORLDWIDE</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- 강남구 섹션 -->
+        <section id="gn-section" class="region-section">
+            <div class="region-visual-header">
+                <!-- 강남구 실제 실루엣 SVG -->
+                <svg class="region-silhouette" viewBox="0 0 100 100">
+                    <path d="M25,20 L75,20 L85,45 L70,85 L35,85 L20,70 L25,40 Z" />
+                    <circle cx="55" cy="50" r="1.5" fill="var(--gold)" />
+                </svg>
+                <h2 class="region-name-large">강남구 · 송파구</h2>
+            </div>
+
+            <div class="chef-grid">
+                <div class="card black-spoon">
+                    <span class="spoon-type">BLACK SPOON</span>
+                    <h3 class="chef-name">트리플 스타</h3>
+                    <p class="chef-intro">미슐랭 3스타 경력의 압도적 기술력.<br>모든 과정이 계산된 완벽한 요리.</p>
+                    <div class="location-meta">
+                        <span class="res-name">트리드 (trid)</span>
+                        <span class="res-addr"><i class="fas fa-location-arrow"></i> 서울 강남구 선릉로162길</span>
+                    </div>
+                </div>
+
+                <div class="card white-spoon">
+                    <span class="spoon-type">WHITE SPOON</span>
+                    <h3 class="chef-name">최강록</h3>
+                    <p class="chef-intro">마스터셰프 코리아 2 우승자.<br>누구도 흉내 낼 수 없는 조림 요리의 대가.</p>
+                    <div class="location-info location-meta">
+                        <span class="res-name">식당네오</span>
+                        <span class="res-addr"><i class="fas fa-location-arrow"></i> 서울 송파구 삼전로12길</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 용산구 섹션 -->
+        <section id="ys-section" class="region-section">
+            <div class="region-visual-header">
+                <!-- 용산구 실제 실루엣 SVG -->
+                <svg class="region-silhouette" viewBox="0 0 100 100">
+                    <path d="M20,30 Q50,20 80,30 L75,70 Q50,90 25,70 Z" />
+                    <circle cx="45" cy="55" r="1.5" fill="var(--gold)" />
+                </svg>
+                <h2 class="region-name-large">용산구 · 중구</h2>
+            </div>
+
+            <div class="chef-grid">
+                <div class="card black-spoon">
+                    <span class="spoon-type">BLACK SPOON</span>
+                    <h3 class="chef-name">나폴리 맛피아</h3>
+                    <p class="chef-intro">생면 파스타의 정수를 보여주는 요리사.<br>이탈리아 본토의 맛을 한국에서 재현.</p>
+                    <div class="location-meta">
+                        <span class="res-name">비아 톨레도 파스타바</span>
+                        <span class="res-addr"><i class="fas fa-location-arrow"></i> 서울 용산구 원효로83길</span>
+                    </div>
+                </div>
+
+                <div class="card black-spoon">
+                    <span class="spoon-type">BLACK SPOON</span>
+                    <h3 class="chef-name">요리하는 돌아이</h3>
+                    <p class="chef-intro">자신만의 확고한 철학을 담은 파격적 퀴진.<br>디테일한 풍미와 직관적인 맛.</p>
+                    <div class="location-meta">
+                        <span class="res-name">디핀 (Deepin)</span>
+                        <span class="res-addr"><i class="fas fa-location-arrow"></i> 서울 중구 퇴계로 411</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 글로벌 섹션 -->
+        <section id="global-section" class="region-section">
+            <div class="region-visual-header">
+                <svg class="region-silhouette" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="35" />
+                    <path d="M50,15 A35,35 0 0,1 50,85 M15,50 A35,35 0 0,1 85,50" />
+                </svg>
+                <h2 class="region-name-large">WORLDWIDE</h2>
+            </div>
+
+            <div class="chef-grid">
+                <div class="card white-spoon">
+                    <span class="spoon-type">WHITE SPOON</span>
+                    <h3 class="chef-name">에드워드 리</h3>
+                    <p class="chef-intro">세계가 인정한 요리 거장.<br>한국의 정체성과 서양의 기술이 만나는 지점.</p>
+                    <div class="location-meta">
+                        <span class="res-name">610 Magnolia</span>
+                        <span class="res-addr"><i class="fas fa-globe"></i> Louisville, USA</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>CHEF ROAD MAP &copy; 2024</p>
+    </footer>
+
+</body>
+</html>
